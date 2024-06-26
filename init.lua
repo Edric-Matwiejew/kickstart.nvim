@@ -242,6 +242,21 @@ require('lazy').setup({
 
   { 'NeogitOrg/neogit', opts = {} },
 
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    build = ':Copilot auth',
+    opts = {
+      suggestion = { enabled = true, auto_trigger = true },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = true,
+        python = true,
+        help = true,
+      },
+    },
+  },
+
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
